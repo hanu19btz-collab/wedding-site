@@ -38,10 +38,10 @@ export default function WeddingInvitation() {
     <main className="min-h-screen overflow-x-hidden bg-[#f6f0ea] text-[#4a3427] font-serif">
 
       {/* HERO */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
         <div
-          className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2000&auto=format&fit=crop')",
@@ -50,7 +50,7 @@ export default function WeddingInvitation() {
 
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 text-center text-white px-6 max-w-5xl">
+        <div className="relative z-10 text-center text-white px-6 max-w-5xl py-24">
 
           <div className="tracking-[0.4em] uppercase text-xs sm:text-sm mb-6 opacity-80">
             19 Septembrie 2026
@@ -83,90 +83,96 @@ export default function WeddingInvitation() {
         <div className="max-w-7xl mx-auto grid grid-cols-3 gap-2 md:gap-8">
 
           {/* CIVIL */}
-          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
+          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
-              💍
+            <div>
+              <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+                💍
+              </div>
+
+              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
+                Civilă
+              </div>
+
+              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
+                Mangalia
+              </h3>
+
+              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
+                Casa Căsătoriilor
+                <br />
+                16:00
+              </p>
             </div>
-
-            <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-              Civilă
-            </div>
-
-            <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-              Mangalia
-            </h3>
-
-            <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-              Casa Căsătoriilor
-              <br />
-              16:00
-            </p>
 
             <a
               href="https://maps.google.com/?q=Casa+Căsătoriilor+Mangalia"
               target="_blank"
-              className="inline-block mt-3 md:mt-8 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
+              className="inline-block mt-6 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
             >
               Locație
             </a>
           </div>
 
           {/* CHURCH */}
-          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
+          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
-              ⛪
+            <div>
+              <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+                ⛪
+              </div>
+
+              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
+                Religioasă
+              </div>
+
+              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
+                Sf. Gheorghe
+              </h3>
+
+              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
+                Biserica
+                <br />
+                17:00
+              </p>
             </div>
-
-            <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-              Religioasă
-            </div>
-
-            <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-              Sf. Gheorghe
-            </h3>
-
-            <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-              Biserica
-              <br />
-              17:00
-            </p>
 
             <a
               href="https://maps.google.com/?q=Biserica+Sf.+Gheorghe+Mangalia"
               target="_blank"
-              className="inline-block mt-3 md:mt-8 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
+              className="inline-block mt-6 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
             >
               Locație
             </a>
           </div>
 
           {/* PARTY */}
-          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
+          <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
-              🥂
+            <div>
+              <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+                🥂
+              </div>
+
+              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
+                Petrecerea
+              </div>
+
+              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
+                Atena
+              </h3>
+
+              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
+                Saturn
+                <br />
+                19:30
+              </p>
             </div>
-
-            <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-              Petrecerea
-            </div>
-
-            <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-              Atena
-            </h3>
-
-            <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-              Saturn
-              <br />
-              19:30
-            </p>
 
             <a
               href="https://maps.google.com/?q=Restaurant+Atena+Saturn"
               target="_blank"
-              className="inline-block mt-3 md:mt-8 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
+              className="inline-block mt-6 px-2 sm:px-3 md:px-8 py-2 md:py-4 rounded-full bg-[#5f4535] text-white text-[10px] sm:text-xs md:text-base"
             >
               Locație
             </a>
@@ -254,13 +260,17 @@ export default function WeddingInvitation() {
 
           <div className="grid grid-cols-2 gap-4 md:gap-10">
 
+            {/* FAMILY 1 */}
             <div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-              <div className="text-sm sm:text-lg md:text-4xl italic leading-relaxed">
+              <div className="flex items-center justify-center gap-2 text-sm sm:text-lg md:text-4xl italic leading-relaxed">
+
                 Elena și Mugurel
-                <span className="ml-2 opacity-70">
+
+                <span className="opacity-70 text-lg md:text-3xl">
                   🕊️
                 </span>
+
               </div>
 
               <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
@@ -269,13 +279,17 @@ export default function WeddingInvitation() {
 
             </div>
 
+            {/* FAMILY 2 */}
             <div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-              <div className="text-sm sm:text-lg md:text-4xl italic leading-relaxed">
+              <div className="flex items-center justify-center gap-2 text-sm sm:text-lg md:text-4xl italic leading-relaxed">
+
                 Elena și Constantin
-                <span className="ml-2 opacity-70">
+
+                <span className="opacity-70 text-lg md:text-3xl">
                   🕊️
                 </span>
+
               </div>
 
               <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
@@ -286,6 +300,7 @@ export default function WeddingInvitation() {
 
           </div>
 
+          {/* NASI */}
           <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
 
             Nașii noștri dragi
