@@ -18,10 +18,10 @@ export default function WeddingInvitation() {
     <main className="min-h-screen overflow-x-hidden bg-[#f6f0ea] text-[#4a3427] font-serif">
 
       {/* HERO */}
-      <section className="relative min-h-[100svh] flex items-center justify-center px-4 sm:px-6 py-16 md:py-20">
+      <section className="relative h-screen min-h-[700px] flex items-center justify-center px-4 sm:px-6 py-10 md:py-20">
 
         <div
-          className="absolute inset-0 bg-cover bg-center scale-105"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000&auto=format&fit=crop')",
@@ -68,10 +68,10 @@ export default function WeddingInvitation() {
 
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,rgba(180,140,110,0.25),transparent_60%)]" />
 
-        <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="relative max-w-7xl mx-auto flex gap-4 md:gap-8 overflow-x-auto snap-x snap-mandatory pb-4 md:grid md:grid-cols-3 md:overflow-visible">
 
           {/* CIVIL */}
-          <div className="group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
+          <div className="min-w-[85vw] sm:min-w-[70vw] md:min-w-0 snap-center group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
 
             <div className="text-5xl md:text-6xl mb-6">
               💍
@@ -101,7 +101,7 @@ export default function WeddingInvitation() {
           </div>
 
           {/* CHURCH */}
-          <div className="group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
+          <div className="min-w-[85vw] sm:min-w-[70vw] md:min-w-0 snap-center group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
 
             <div className="text-5xl md:text-6xl mb-6">
               ⛪
@@ -131,7 +131,7 @@ export default function WeddingInvitation() {
           </div>
 
           {/* PARTY */}
-          <div className="group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
+          <div className="min-w-[85vw] sm:min-w-[70vw] md:min-w-0 snap-center group bg-white/80 backdrop-blur rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-2xl border border-[#eaded3] hover:-translate-y-2 transition duration-500 text-center">
 
             <div className="text-5xl md:text-6xl mb-6">
               🥂
@@ -162,167 +162,6 @@ export default function WeddingInvitation() {
 
         </div>
       </section>
-
-      {/* COUNTDOWN */}
-      <section className="px-4 sm:px-6 py-16 md:py-24">
-
-        <div className="max-w-5xl mx-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-[#eaded3]">
-
-          <div
-            className="bg-cover bg-center relative"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2000&auto=format&fit=crop')",
-            }}
-          >
-
-            <div className="absolute inset-0 bg-black/55" />
-
-            <div className="relative z-10 px-4 sm:px-8 py-16 md:py-24 text-center text-white">
-
-              <div className="uppercase tracking-[0.5em] text-xs md:text-sm opacity-70 mb-6">
-                Countdown
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl md:text-7xl italic mb-10 md:mb-14">
-                Până la marele moment
-              </h2>
-
-              <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto">
-
-                <div className="bg-white/10 backdrop-blur rounded-[1.5rem] md:rounded-[2rem] py-6 md:py-10 border border-white/10">
-                  <div className="text-3xl sm:text-4xl md:text-7xl font-light">
-                    {days}
-                  </div>
-
-                  <div className="mt-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm">
-                    Zile
-                  </div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur rounded-[1.5rem] md:rounded-[2rem] py-6 md:py-10 border border-white/10">
-                  <div className="text-3xl sm:text-4xl md:text-7xl font-light">
-                    {hours}
-                  </div>
-
-                  <div className="mt-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm">
-                    Ore
-                  </div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur rounded-[1.5rem] md:rounded-[2rem] py-6 md:py-10 border border-white/10">
-                  <div className="text-3xl sm:text-4xl md:text-7xl font-light">
-                    {minutes}
-                  </div>
-
-                  <div className="mt-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm">
-                    Minute
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAMILY */}
-      <section className="px-4 sm:px-6 py-16 md:py-24">
-
-        <div className="max-w-4xl mx-auto text-center">
-
-          <div className="uppercase tracking-[0.4em] text-xs md:text-sm text-[#a07d63] mb-6">
-            Familia
-          </div>
-
-          <h2 className="text-3xl md:text-5xl italic mb-10 md:mb-12">
-            Alături de cei dragi
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 text-lg md:text-xl leading-8 md:leading-10">
-
-            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Mugurel Olteanu
-            </div>
-
-            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Constantin Onodea
-            </div>
-
-          </div>
-
-          <div className="mt-8 md:mt-10 bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
-
-            Nașii noștri dragi
-            <br />
-
-            <span className="italic text-2xl md:text-3xl">
-              Lavinia și Dănuț Marian
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* RSVP */}
-      <section className="px-4 sm:px-6 pb-16 md:pb-28">
-
-        <div className="max-w-5xl mx-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-[#4e382b] text-white relative">
-
-          <div
-            className="absolute inset-0 opacity-20 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop')",
-            }}
-          />
-
-          <div className="relative z-10 px-4 sm:px-8 py-16 md:py-24 text-center">
-
-            <div className="uppercase tracking-[0.4em] text-xs md:text-sm opacity-70 mb-6">
-              RSVP
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-6xl italic mb-8">
-              Vă așteptăm cu drag!
-            </h2>
-
-            <p className="max-w-2xl mx-auto text-base md:text-lg leading-8 md:leading-9 opacity-90 mb-14">
-              Vă rugăm să ne confirmați prezența până la data de 1 Septembrie 2026.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
-
-              <a
-                href="tel:0785050154"
-                className="rounded-[1.5rem] md:rounded-[2rem] border border-white/20 bg-white/10 backdrop-blur px-6 md:px-8 py-6 md:py-8 hover:scale-105 transition duration-300"
-              >
-                <div className="text-2xl md:text-3xl italic mb-3">
-                  Diana
-                </div>
-
-                <div className="tracking-[0.2em]">
-                  0785 050 154
-                </div>
-              </a>
-
-              <a
-                href="tel:0752146011"
-                className="rounded-[1.5rem] md:rounded-[2rem] border border-white/20 bg-white/10 backdrop-blur px-6 md:px-8 py-6 md:py-8 hover:scale-105 transition duration-300"
-              >
-                <div className="text-2xl md:text-3xl italic mb-3">
-                  Ciprian
-                </div>
-
-                <div className="tracking-[0.2em]">
-                  0752 146 011
-                </div>
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
     </main>
   );
 }
