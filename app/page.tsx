@@ -1,18 +1,52 @@
-// NEXT.JS + TAILWIND READY
-// 1. Creezi proiect nou: npx create-next-app@latest wedding-invitation
-// 2. Înlocuiești tot din app/page.js cu acest cod
-// 3. Rulezi: npm run dev
-// 4. Upload pe Vercel pentru publicare online
+"use client";
+
+import { useEffect, useState } from "react";
 
 export default function WeddingInvitation() {
   const eventDate = new Date("2026-09-19T16:00:00");
 
-  const now = new Date();
-  const diff = eventDate.getTime() - now.getTime();
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
-  const days = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
-  const hours = Math.max(0, Math.floor((diff / (1000 * 60 * 60)) % 24));
-  const minutes = Math.max(0, Math.floor((diff / (1000 * 60)) % 60));
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = eventDate.getTime() - now.getTime();
+
+      const days = Math.max(
+        0,
+        Math.floor(diff / (1000 * 60 * 60 * 24))
+      );
+
+      const hours = Math.max(
+        0,
+        Math.floor((diff / (1000 * 60 * 60)) % 24)
+      );
+
+      const minutes = Math.max(
+        0,
+        Math.floor((diff / (1000 * 60)) % 60)
+      );
+
+      const seconds = Math.max(
+        0,
+        Math.floor((diff / 1000) % 60)
+      );
+
+      setTimeLeft({
+        days,
+        hours,
+        minutes,
+        seconds,
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f6f0ea] text-[#4a3427] font-serif">
@@ -21,7 +55,7 @@ export default function WeddingInvitation() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000&auto=format&fit=crop')",
@@ -40,7 +74,9 @@ export default function WeddingInvitation() {
             Diana
           </h1>
 
-          <div className="text-2xl md:text-4xl my-3 opacity-80">&</div>
+          <div className="text-2xl md:text-4xl my-3 opacity-80">
+            &
+          </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-8xl italic leading-none drop-shadow-2xl">
             Ciprian
@@ -60,9 +96,12 @@ export default function WeddingInvitation() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-3 gap-2 md:gap-8">
 
+          {/* CIVIL */}
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">💍</div>
+            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+              💍
+            </div>
 
             <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
               Civilă
@@ -87,9 +126,12 @@ export default function WeddingInvitation() {
             </a>
           </div>
 
+          {/* CHURCH */}
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">⛪</div>
+            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+              ⛪
+            </div>
 
             <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
               Religioasă
@@ -114,9 +156,12 @@ export default function WeddingInvitation() {
             </a>
           </div>
 
+          {/* PARTY */}
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center">
 
-            <div className="text-3xl md:text-6xl mb-3 md:mb-6">🥂</div>
+            <div className="text-3xl md:text-6xl mb-3 md:mb-6">
+              🥂
+            </div>
 
             <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
               Petrecerea
@@ -146,6 +191,7 @@ export default function WeddingInvitation() {
 
       {/* COUNTDOWN */}
       <section className="px-4 sm:px-6 py-12 md:py-24">
+
         <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl bg-[#4e382b] text-white">
 
           <div className="px-4 sm:px-8 py-12 md:py-20 text-center">
@@ -158,21 +204,46 @@ export default function WeddingInvitation() {
               Până la marele moment
             </h2>
 
-            <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
 
               <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{days}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">Zile</div>
+                <div className="text-3xl md:text-6xl">
+                  {timeLeft.days}
+                </div>
+
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  Zile
+                </div>
               </div>
 
               <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{hours}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">Ore</div>
+                <div className="text-3xl md:text-6xl">
+                  {timeLeft.hours}
+                </div>
+
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  Ore
+                </div>
               </div>
 
               <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{minutes}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">Minute</div>
+                <div className="text-3xl md:text-6xl">
+                  {timeLeft.minutes}
+                </div>
+
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  Min
+                </div>
+              </div>
+
+              <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
+                <div className="text-3xl md:text-6xl">
+                  {timeLeft.seconds}
+                </div>
+
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  Sec
+                </div>
               </div>
 
             </div>
@@ -183,59 +254,66 @@ export default function WeddingInvitation() {
       {/* FAMILY */}
       <section className="px-4 sm:px-6 py-12 md:py-24">
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
 
           <div className="uppercase tracking-[0.4em] text-xs md:text-sm text-[#a07d63] mb-6">
             Familia
           </div>
 
           <h2 className="text-3xl md:text-5xl italic mb-10">
-            Alături de cei dragi
+            Alături de mamele noastre
+            <br />
+            și purtând în inimă pe cei care ne lipsesc
           </h2>
 
           <div className="grid grid-cols-2 gap-6 md:gap-10">
 
-  {/* FAMILY 1 */}
-  <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+            {/* FAMILY 1 */}
+            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-    <div className="text-2xl md:text-4xl italic leading-relaxed">
-      Elena și Mugurel
-      <span className="ml-2 opacity-70">
-        🕊️
-      </span>
-    </div>
+              <div className="text-lg sm:text-xl md:text-4xl italic leading-relaxed whitespace-nowrap">
+                Elena și Mugurel
+                <span className="ml-2 opacity-70">
+                  🕊️
+                </span>
+              </div>
 
-    <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
-      OLTEANU
-    </div>
+              <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+                OLTEANU
+              </div>
 
-  </div>
+            </div>
 
-  {/* FAMILY 2 */}
-  <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+            {/* FAMILY 2 */}
+            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-    <div className="text-2xl md:text-4xl italic leading-relaxed">
-      Elena și Constantin
-      <span className="ml-2 opacity-70">
-        🕊️
-      </span>
-    </div>
+              <div className="text-lg sm:text-xl md:text-4xl italic leading-relaxed whitespace-nowrap">
+                Elena și Constantin
+                <span className="ml-2 opacity-70">
+                  🕊️
+                </span>
+              </div>
 
-    <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
-      ONODEA
-    </div>
+              <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+                ONODEA
+              </div>
 
-  </div>
+            </div>
 
-</div>
+          </div>
 
+          {/* NASI */}
           <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
+
             Nașii noștri dragi
             <br />
+
             <span className="italic text-2xl md:text-3xl">
               Lavinia și Dănuț Marian
             </span>
+
           </div>
+
         </div>
       </section>
 
@@ -264,16 +342,26 @@ export default function WeddingInvitation() {
                 href="tel:0785050154"
                 className="rounded-[1.5rem] border border-white/20 bg-white/10 px-6 md:px-8 py-6 md:py-8"
               >
-                <div className="text-2xl md:text-3xl italic mb-3">Diana</div>
-                <div className="tracking-[0.2em]">0785 050 154</div>
+                <div className="text-2xl md:text-3xl italic mb-3">
+                  Diana
+                </div>
+
+                <div className="tracking-[0.2em]">
+                  0785 050 154
+                </div>
               </a>
 
               <a
                 href="tel:0752146011"
                 className="rounded-[1.5rem] border border-white/20 bg-white/10 px-6 md:px-8 py-6 md:py-8"
               >
-                <div className="text-2xl md:text-3xl italic mb-3">Ciprian</div>
-                <div className="tracking-[0.2em]">0752 146 011</div>
+                <div className="text-2xl md:text-3xl italic mb-3">
+                  Ciprian
+                </div>
+
+                <div className="tracking-[0.2em]">
+                  0752 146 011
+                </div>
               </a>
 
             </div>
