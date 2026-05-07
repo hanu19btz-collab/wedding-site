@@ -196,11 +196,13 @@ export default function WeddingInvitation() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 text-lg md:text-xl leading-8 md:leading-10">
 
             <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Mugurel Olteanu
+              Elena și Mugurel 
+              Olteanu
             </div>
 
             <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Constantin Onodea
+              Elena și Constantin 
+              Onodea
             </div>
 
           </div>
