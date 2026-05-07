@@ -86,23 +86,26 @@ export default function WeddingInvitation() {
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
             <div>
+
               <div className="text-3xl md:text-6xl mb-3 md:mb-6">
                 💍
               </div>
 
-              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-                Civilă
+              <div className="uppercase text-[9px] md:text-sm font-semibold leading-4 md:leading-7 text-[#6d4d3a]">
+
+                CUNUNIA CIVILĂ:
+                <br />
+
+                CASA CĂSĂTORIILOR
+                <br />
+
+                MANGALIA,
+                <br />
+
+                ORA 16:00
+
               </div>
 
-              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-                Mangalia
-              </h3>
-
-              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-                Casa Căsătoriilor
-                <br />
-                16:00
-              </p>
             </div>
 
             <a
@@ -112,29 +115,33 @@ export default function WeddingInvitation() {
             >
               Locație
             </a>
+
           </div>
 
           {/* CHURCH */}
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
             <div>
+
               <div className="text-3xl md:text-6xl mb-3 md:mb-6">
                 ⛪
               </div>
 
-              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-                Religioasă
+              <div className="uppercase text-[9px] md:text-sm font-semibold leading-4 md:leading-7 text-[#6d4d3a]">
+
+                CUNUNIA RELIGIOASĂ:
+                <br />
+
+                BISERICA "SF.GHEORGHE"
+                <br />
+
+                MANGALIA,
+                <br />
+
+                ORA 17:00
+
               </div>
 
-              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-                Sf. Gheorghe
-              </h3>
-
-              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-                Biserica
-                <br />
-                17:00
-              </p>
             </div>
 
             <a
@@ -144,29 +151,33 @@ export default function WeddingInvitation() {
             >
               Locație
             </a>
+
           </div>
 
           {/* PARTY */}
           <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 sm:p-4 md:p-10 shadow-2xl border border-[#eaded3] text-center flex flex-col justify-between">
 
             <div>
+
               <div className="text-3xl md:text-6xl mb-3 md:mb-6">
                 🥂
               </div>
 
-              <div className="uppercase tracking-[0.15em] md:tracking-[0.4em] text-[9px] md:text-sm mb-2 md:mb-3 text-[#a07d63]">
-                Petrecerea
+              <div className="uppercase text-[9px] md:text-sm font-semibold leading-4 md:leading-7 text-[#6d4d3a]">
+
+                PETRECEREA:
+                <br />
+
+                RESTAURANT ATENA,
+                <br />
+
+                SATURN,
+                <br />
+
+                ORA 19:30
+
               </div>
 
-              <h3 className="text-sm sm:text-base md:text-3xl italic mb-2 md:mb-5">
-                Atena
-              </h3>
-
-              <p className="text-[11px] sm:text-xs md:text-lg leading-4 md:leading-8">
-                Saturn
-                <br />
-                19:30
-              </p>
             </div>
 
             <a
@@ -176,6 +187,7 @@ export default function WeddingInvitation() {
             >
               Locație
             </a>
+
           </div>
 
         </div>
