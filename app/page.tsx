@@ -221,31 +221,41 @@ export default function WeddingInvitation() {
 
       </div>
 
-      {/* FAMILY 2 */}
-      <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
+     <div className="grid grid-cols-2 gap-6 md:gap-10">
 
-        <div className="text-xl md:text-3xl italic leading-relaxed">
-          Elena
-        </div>
+  {/* FAMILY 1 */}
+  <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-        <div className="flex items-center justify-center gap-2 mt-2">
-
-          <span className="text-lg md:text-2xl italic">
-            Constantin
-          </span>
-
-          <span className="text-xl opacity-70">
-            🕊️
-          </span>
-        </div>
-
-        <div className="mt-3 tracking-[0.2em] uppercase text-xs md:text-sm text-[#8a6b57]">
-          ONODEA
-        </div>
-
-      </div>
-
+    <div className="text-2xl md:text-4xl italic leading-relaxed">
+      Elena și Mugurel
+      <span className="ml-2 opacity-70">
+        🕊️
+      </span>
     </div>
+
+    <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+      OLTEANU
+    </div>
+
+  </div>
+
+  {/* FAMILY 2 */}
+  <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+
+    <div className="text-2xl md:text-4xl italic leading-relaxed">
+      Elena și Constantin
+      <span className="ml-2 opacity-70">
+        🕊️
+      </span>
+    </div>
+
+    <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+      ONODEA
+    </div>
+
+  </div>
+
+</div>
 
     {/* NASI */}
     <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
