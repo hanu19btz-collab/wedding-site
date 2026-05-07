@@ -280,25 +280,25 @@ export default function WeddingInvitation() {
             </div>
 
             {/* FAMILY 2 */}
-            <div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+<div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-              <div className="flex items-center justify-center gap-2 text-sm sm:text-lg md:text-4xl italic leading-relaxed">
+  <div className="flex items-center justify-center whitespace-nowrap">
 
-                Elena și Constantin
+    <span className="text-sm sm:text-lg md:text-4xl italic">
+      Elena și Constantin
+    </span>
 
-                <span className="opacity-70 text-lg md:text-3xl">
-                  🕊️
-                </span>
+    <span className="ml-2 opacity-70 text-lg md:text-3xl">
+      🕊️
+    </span>
 
-              </div>
+  </div>
 
-              <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
-                ONODEA
-              </div>
+  <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
+    ONODEA
+  </div>
 
-            </div>
-
-          </div>
+</div>
 
           {/* NASI */}
           <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
