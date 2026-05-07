@@ -44,31 +44,31 @@ export default function WeddingInvitation() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2000&auto=format&fit=crop')",
+              "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop')",
           }}
         />
 
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/35" />
 
         <div className="relative z-10 text-center text-white px-6 max-w-5xl py-24">
 
-          <div className="tracking-[0.4em] uppercase text-xs sm:text-sm mb-6 opacity-80">
-            19 Septembrie 2026
+          <div className="tracking-[0.45em] uppercase text-xs sm:text-sm mb-6 opacity-90">
+            19 SEPTEMBRIE 2026
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl italic leading-none drop-shadow-2xl">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl italic leading-none drop-shadow-2xl">
             Diana
           </h1>
 
-          <div className="text-2xl md:text-4xl my-3 opacity-80">
+          <div className="text-3xl md:text-5xl my-4 opacity-90">
             &
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl italic leading-none drop-shadow-2xl">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl italic leading-none drop-shadow-2xl">
             Ciprian
           </h1>
 
-          <div className="mt-8 text-base sm:text-lg md:text-2xl leading-8 md:leading-10 max-w-3xl mx-auto font-light">
+          <div className="mt-10 text-lg sm:text-xl md:text-2xl leading-9 md:leading-10 max-w-3xl mx-auto font-light">
             Și astfel începe pentru totdeauna...
             <br />
             Vă invităm să ne fiți alături în cea mai importantă zi din viața noastră.
@@ -193,56 +193,6 @@ export default function WeddingInvitation() {
         </div>
       </section>
 
-      {/* COUNTDOWN */}
-      <section className="px-4 sm:px-6 py-12 md:py-24">
-
-        <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl bg-[#4e382b] text-white">
-
-          <div className="px-4 sm:px-8 py-12 md:py-20 text-center">
-
-            <div className="uppercase tracking-[0.4em] text-xs md:text-sm opacity-70 mb-6">
-              Countdown
-            </div>
-
-            <h2 className="text-3xl md:text-6xl italic mb-10">
-              Până la marele moment
-            </h2>
-
-            <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
-
-              <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{timeLeft.days}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
-                  Zile
-                </div>
-              </div>
-
-              <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{timeLeft.hours}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
-                  Ore
-                </div>
-              </div>
-
-              <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{timeLeft.minutes}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
-                  Min
-                </div>
-              </div>
-
-              <div className="bg-white/10 rounded-[1.5rem] py-5 md:py-10">
-                <div className="text-3xl md:text-6xl">{timeLeft.seconds}</div>
-                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
-                  Sec
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAMILY */}
       <section className="px-4 sm:px-6 py-12 md:py-24">
 
@@ -319,10 +269,56 @@ export default function WeddingInvitation() {
         </div>
       </section>
 
+      {/* COUNTDOWN */}
+      <section className="px-4 sm:px-6 py-12 md:py-24">
+
+        <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-r from-[#4a2f22] via-[#6b4a35] to-[#4a2f22] text-white">
+
+          <div className="px-4 sm:px-8 py-12 md:py-20 text-center">
+
+            <div className="uppercase tracking-[0.4em] text-xs md:text-sm opacity-70 mb-6">
+              Până la marele moment
+            </div>
+
+            <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
+
+              <div>
+                <div className="text-3xl md:text-6xl font-light">{timeLeft.days}</div>
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  ZILE
+                </div>
+              </div>
+
+              <div>
+                <div className="text-3xl md:text-6xl font-light">{timeLeft.hours}</div>
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  ORE
+                </div>
+              </div>
+
+              <div>
+                <div className="text-3xl md:text-6xl font-light">{timeLeft.minutes}</div>
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  MIN
+                </div>
+              </div>
+
+              <div>
+                <div className="text-3xl md:text-6xl font-light">{timeLeft.seconds}</div>
+                <div className="mt-2 uppercase text-[10px] md:text-sm tracking-[0.2em]">
+                  SEC
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* RSVP */}
       <section className="px-4 sm:px-6 pb-16 md:pb-28">
 
-        <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl bg-[#4e382b] text-white">
+        <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-r from-[#4a2f22] via-[#6b4a35] to-[#4a2f22] text-white">
 
           <div className="px-4 sm:px-8 py-14 md:py-24 text-center">
 
