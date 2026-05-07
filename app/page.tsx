@@ -40,11 +40,15 @@ export default function WeddingInvitation() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
+        {/* IMPORTANT:
+            pune poza ta in:
+            public/hero.jpg
+        */}
+
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop')",
+            backgroundImage: "url('/hero.jpg')",
           }}
         />
 
