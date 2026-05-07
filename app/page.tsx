@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 
 export default function WeddingInvitation() {
-  const eventDate = new Date("2026-09-19T16:00:00");
-
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -13,37 +11,25 @@ export default function WeddingInvitation() {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const diff = eventDate.getTime() - now.getTime();
+    const target = new Date("2026-09-19T16:00:00").getTime();
 
-      const days = Math.max(
-        0,
-        Math.floor(diff / (1000 * 60 * 60 * 24))
-      );
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const diff = target - now;
 
-      const hours = Math.max(
-        0,
-        Math.floor((diff / (1000 * 60 * 60)) % 24)
-      );
-
-      const minutes = Math.max(
-        0,
-        Math.floor((diff / (1000 * 60)) % 60)
-      );
-
-      const seconds = Math.max(
-        0,
-        Math.floor((diff / 1000) % 60)
-      );
+      if (diff <= 0) return;
 
       setTimeLeft({
-        days,
-        hours,
-        minutes,
-        seconds,
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
       });
-    }, 1000);
+    };
+
+    updateCountdown();
+
+    const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -58,7 +44,7 @@ export default function WeddingInvitation() {
           className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000&auto=format&fit=crop')",
+              "url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2000&auto=format&fit=crop')",
           }}
         />
 
@@ -266,35 +252,33 @@ export default function WeddingInvitation() {
             și purtând în inimă pe cei care ne lipsesc
           </h2>
 
-          <div className="grid grid-cols-2 gap-6 md:gap-10">
+          <div className="grid grid-cols-2 gap-4 md:gap-10">
 
-            {/* FAMILY 1 */}
-            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+            <div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-              <div className="text-lg sm:text-xl md:text-4xl italic leading-relaxed whitespace-nowrap">
+              <div className="text-sm sm:text-lg md:text-4xl italic leading-relaxed">
                 Elena și Mugurel
                 <span className="ml-2 opacity-70">
                   🕊️
                 </span>
               </div>
 
-              <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+              <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
                 OLTEANU
               </div>
 
             </div>
 
-            {/* FAMILY 2 */}
-            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
+            <div className="bg-white rounded-[1.5rem] p-4 sm:p-6 md:p-10 shadow-xl border border-[#eaded3] text-center">
 
-              <div className="text-lg sm:text-xl md:text-4xl italic leading-relaxed whitespace-nowrap">
+              <div className="text-sm sm:text-lg md:text-4xl italic leading-relaxed">
                 Elena și Constantin
                 <span className="ml-2 opacity-70">
                   🕊️
                 </span>
               </div>
 
-              <div className="mt-4 tracking-[0.25em] uppercase text-sm md:text-lg text-[#8a6b57]">
+              <div className="mt-4 tracking-[0.25em] uppercase text-xs md:text-lg text-[#8a6b57]">
                 ONODEA
               </div>
 
@@ -302,7 +286,6 @@ export default function WeddingInvitation() {
 
           </div>
 
-          {/* NASI */}
           <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
 
             Nașii noștri dragi
