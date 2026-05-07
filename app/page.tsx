@@ -181,41 +181,86 @@ export default function WeddingInvitation() {
       </section>
 
       {/* FAMILY */}
-      <section className="px-4 sm:px-6 py-12 md:py-24">
+<section className="px-4 sm:px-6 py-12 md:py-24">
 
-        <div className="max-w-4xl mx-auto text-center">
+  <div className="max-w-5xl mx-auto text-center">
 
-          <div className="uppercase tracking-[0.4em] text-xs md:text-sm text-[#a07d63] mb-6">
-            Familia
-          </div>
+    <div className="uppercase tracking-[0.4em] text-xs md:text-sm text-[#a07d63] mb-6">
+      Familia
+    </div>
 
-          <h2 className="text-3xl md:text-5xl italic mb-10">
-            Alături de cei dragi
-          </h2>
+    <h2 className="text-3xl md:text-5xl italic mb-10">
+      Alături de mamele noastre
+      <br />
+      și purtând în inimă pe cei care ne lipsesc
+    </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 text-lg md:text-xl leading-8 md:leading-10">
+    <div className="grid grid-cols-2 gap-6 md:gap-10">
 
-            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Mugurel 
-              Olteanu
-            </div>
+      {/* FAMILY 1 */}
+      <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
 
-            <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
-              Elena și Constantin 
-              Onodea
-            </div>
-
-          </div>
-
-          <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
-            Nașii noștri dragi
-            <br />
-            <span className="italic text-2xl md:text-3xl">
-              Lavinia și Dănuț Marian
-            </span>
-          </div>
+        <div className="text-xl md:text-3xl italic leading-relaxed">
+          Elena
         </div>
-      </section>
+
+        <div className="flex items-center justify-center gap-2 mt-2">
+
+          <span className="text-lg md:text-2xl italic">
+            Mugurel
+          </span>
+
+          <span className="text-xl opacity-70">
+            🕊️
+          </span>
+        </div>
+
+        <div className="mt-3 tracking-[0.2em] uppercase text-xs md:text-sm text-[#8a6b57]">
+          OLTEANU
+        </div>
+
+      </div>
+
+      {/* FAMILY 2 */}
+      <div className="bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3]">
+
+        <div className="text-xl md:text-3xl italic leading-relaxed">
+          Elena
+        </div>
+
+        <div className="flex items-center justify-center gap-2 mt-2">
+
+          <span className="text-lg md:text-2xl italic">
+            Constantin
+          </span>
+
+          <span className="text-xl opacity-70">
+            🕊️
+          </span>
+        </div>
+
+        <div className="mt-3 tracking-[0.2em] uppercase text-xs md:text-sm text-[#8a6b57]">
+          ONODEA
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* NASI */}
+    <div className="mt-8 bg-white rounded-[1.5rem] p-6 md:p-10 shadow-xl border border-[#eaded3] text-lg md:text-xl leading-8 md:leading-10">
+
+      Nașii noștri dragi
+      <br />
+
+      <span className="italic text-2xl md:text-3xl">
+        Lavinia și Dănuț Marian
+      </span>
+
+    </div>
+
+  </div>
+</section>
 
       {/* RSVP */}
       <section className="px-4 sm:px-6 pb-16 md:pb-28">
